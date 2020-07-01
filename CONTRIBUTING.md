@@ -138,8 +138,14 @@ npm version <major|minor|patch> -m "## 1.2.3 - 2017-01-13
 
 - Change included in this release
 - Another change included in this release"
+```
+
+Then run:
+```bash
 git push --tags --set-upstream origin refs/heads/v1.2.3:refs/heads/v1.2.3
 ```
+
+Open a PR for the release version.
 
 To actually publish, you will need access to an `npm` account that owns `accessible-autocomplete`. Merge the version PR and then run:
 
@@ -148,3 +154,13 @@ git checkout master
 git pull --rebase
 npm publish
 ```
+
+Create a release in the [Github interface](https://github.com/alphagov/accessible-autocomplete/releases/new)
+  - select the latest tag version
+  - set "v[version-number]" as the title
+  - add release notes from changelog
+  - add a summary of highlights
+  - (you don't need to manually attach source code files)
+  - publish release
+
+Send a message to our users in both the X-GOV and GDS #govuk-design-system slack channels that indicates there's a new release with a short summary.
