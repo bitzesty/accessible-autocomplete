@@ -145,7 +145,7 @@ Then run:
 git push --tags --set-upstream origin refs/heads/v1.2.3:refs/heads/v1.2.3
 ```
 
-Open a PR for the release version.
+Create a pull request for the release.
 
 To actually publish, you will need access to an `npm` account that owns `accessible-autocomplete`. Merge the version PR and then run:
 
@@ -155,12 +155,15 @@ git pull --rebase
 npm publish
 ```
 
-Create a release in the [Github interface](https://github.com/alphagov/accessible-autocomplete/releases/new)
-  - select the latest tag version
-  - set "v[version-number]" as the title
-  - add release notes from changelog
-  - add a summary of highlights
-  - (you don't need to manually attach source code files)
-  - publish release
+[Create a new release](https://github.com/alphagov/accessible-autocomplete/releases/new) on GitHub.
+  1. Select the latest tag version.
+  2. Set "v[VERSION-NUMBER]" as the title.
+  3. Add the release notes from the changelog.
+  4. Add a summary of highlights.
+  5. Publish the release.
 
-Send a message to our users in both the X-GOV and GDS #govuk-design-system slack channels that indicates there's a new release with a short summary.
+You don't need to manually attach source code files to the release on GitHub.
+
+Post a short summary of the release in the cross-government and GDS #govuk-design-system Slack channels. For example:
+
+🚀 We’ve just released Accessible Autocomplete v2.0.1. You can now [use the acccessible autocomplete multiple times on one page]. Thanks to @<SLACK-NAME> and @<SLACK-NAME> for helping with this release. [https://github.com/alphagov/accessible-autocomplete/releases/tag/v2.0.1](https://github.com/alphagov/accessible-autocomplete/releases/tag/v2.0.1)
